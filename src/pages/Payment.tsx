@@ -84,7 +84,7 @@ const Payment = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-800 text-gray-300 text-sm mb-4">
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-black text-gray-300 text-sm mb-4">
               <span>Área Administrativa</span>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -98,7 +98,7 @@ const Payment = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
-              <Card className="bg-gray-900 border-gray-800 text-white">
+              <Card className="bg-black border-gray-800 text-white">
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <Link className="w-5 h-5 mr-2" />
@@ -123,7 +123,7 @@ const Payment = () => {
                         step="0.01"
                         required
                         placeholder="0,00"
-                        className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
+                        className="w-full p-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
                       />
                     </div>
                     
@@ -138,7 +138,7 @@ const Payment = () => {
                         onChange={(e) => setDescription(e.target.value)}
                         required
                         placeholder="Ex: Desenvolvimento de website"
-                        className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
+                        className="w-full p-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
                       />
                     </div>
                     
@@ -153,7 +153,7 @@ const Payment = () => {
                         onChange={(e) => setClientName(e.target.value)}
                         required
                         placeholder="Nome do cliente"
-                        className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
+                        className="w-full p-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
                       />
                     </div>
                     
@@ -167,7 +167,7 @@ const Payment = () => {
                         value={clientEmail}
                         onChange={(e) => setClientEmail(e.target.value)}
                         placeholder="email@cliente.com"
-                        className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
+                        className="w-full p-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
                       />
                     </div>
                     
@@ -191,7 +191,7 @@ const Payment = () => {
                       </button>
                       <button
                         onClick={resetForm}
-                        className="py-3 px-4 bg-gray-800 text-white font-medium rounded-lg hover:bg-gray-700 transition-colors"
+                        className="py-3 px-4 bg-black text-white font-medium rounded-lg hover:bg-gray-700 transition-colors"
                       >
                         Limpar
                       </button>
@@ -202,7 +202,7 @@ const Payment = () => {
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="mt-6 p-4 bg-gray-800 rounded-lg border border-gray-700"
+                      className="mt-6 p-4 bg-black rounded-lg border border-gray-700"
                     >
                       <p className="text-sm font-medium text-gray-300 mb-2">Link de pagamento gerado:</p>
                       <div className="flex">
@@ -227,7 +227,7 @@ const Payment = () => {
             </div>
             
             <div>
-              <Card className="bg-gray-900 border-gray-800 text-white mb-6">
+              <Card className="bg-black border-gray-800 text-white mb-6">
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <CreditCard className="w-5 h-5 mr-2" />
@@ -235,19 +235,19 @@ const Payment = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <div className="flex items-center p-2 bg-gray-800 rounded-lg">
+                  <div className="flex items-center p-2 bg-black rounded-lg">
                     <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
                       <span className="text-blue-600 font-bold">P</span>
                     </div>
                     <span>Pix</span>
                   </div>
-                  <div className="flex items-center p-2 bg-gray-800 rounded-lg">
+                  <div className="flex items-center p-2 bg-black rounded-lg">
                     <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
                       <span className="text-green-600 font-bold">B</span>
                     </div>
                     <span>Boleto Bancário</span>
                   </div>
-                  <div className="flex items-center p-2 bg-gray-800 rounded-lg">
+                  <div className="flex items-center p-2 bg-black rounded-lg">
                     <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
                       <span className="text-purple-600 font-bold">C</span>
                     </div>
@@ -256,7 +256,7 @@ const Payment = () => {
                 </CardContent>
               </Card>
               
-              <Card className="bg-gray-900 border-gray-800 text-white">
+              <Card className="bg-black border-gray-800 text-white">
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <Wallet className="w-5 h-5 mr-2" />
@@ -281,7 +281,7 @@ const Payment = () => {
             </div>
           </div>
           
-          <div className="mt-10 bg-gray-900 border border-gray-800 rounded-xl p-6">
+          <div className="mt-10 bg-black border border-gray-800 rounded-xl p-6">
             <h2 className="text-lg font-medium mb-4">Links Recentes</h2>
             <div className="overflow-x-auto">
               <table className="min-w-full">

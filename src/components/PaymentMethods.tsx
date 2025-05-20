@@ -70,7 +70,7 @@ export default function PaymentMethods() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-800 text-gray-300 text-sm mb-4">
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-black text-gray-300 text-sm mb-4">
               <span>Flexibilidade para você</span>
             </div>
             <h2 className="text-3xl font-bold mb-4 text-white">
@@ -88,12 +88,12 @@ export default function PaymentMethods() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`bg-gray-800 p-6 rounded-xl shadow-elegant flex items-start gap-4 cursor-pointer border-2 ${
+                  className={`bg-black p-6 rounded-xl shadow-elegant flex items-start gap-4 cursor-pointer border-2 ${
                     selectedMethod === method.value ? "border-purple-500" : "border-transparent"
                   }`}
                   onClick={() => setSelectedMethod(method.value)}
                 >
-                  <div className="p-3 bg-gray-700 rounded-lg text-white">
+                  <div className="p-3 bg-gray-850 rounded-lg text-white">
                     {method.icon}
                   </div>
                   <div>
@@ -122,15 +122,15 @@ export default function PaymentMethods() {
               </p>
               
               <div className="flex flex-wrap mb-6 gap-4">
-                <div className="bg-gray-700 px-4 py-2 rounded-md flex items-center">
+                <div className="bg-gray-850 px-4 py-2 rounded-md flex items-center">
                   <img src="https://api.iconify.design/ic:baseline-credit-card.svg?color=white" alt="Cartão" className="payment-method-icon" />
                   <span className="text-white">Cartões</span>
                 </div>
-                <div className="bg-gray-700 px-4 py-2 rounded-md flex items-center">
+                <div className="bg-gray-850 px-4 py-2 rounded-md flex items-center">
                   <img src="https://api.iconify.design/mdi:qrcode.svg?color=white" alt="PIX" className="payment-method-icon" />
                   <span className="text-white">PIX</span>
                 </div>
-                <div className="bg-gray-700 px-4 py-2 rounded-md flex items-center">
+                <div className="bg-gray-850 px-4 py-2 rounded-md flex items-center">
                   <img src="https://api.iconify.design/mdi:bank.svg?color=white" alt="Boleto" className="payment-method-icon" />
                   <span className="text-white">Boleto</span>
                 </div>
@@ -141,7 +141,7 @@ export default function PaymentMethods() {
                   <input 
                     type="text" 
                     placeholder="Insira o valor" 
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md text-white" 
+                    className="w-full px-4 py-3 bg-black border border-gray-700 rounded-md text-white" 
                   />
                 </div>
                 <button 
@@ -201,7 +201,7 @@ export default function PaymentMethods() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-800 text-gray-300 text-sm mb-4">
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-black text-gray-300 text-sm mb-4">
               <span>Compromisso com você</span>
             </div>
             <h2 className="text-3xl font-bold mb-4 text-white">
@@ -219,11 +219,11 @@ export default function PaymentMethods() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gray-800 rounded-xl shadow-elegant overflow-hidden"
+                  className="bg-black rounded-xl shadow-elegant overflow-hidden"
                 >
                   <div className="p-6">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="p-3 bg-gray-700 rounded-lg text-white">
+                      <div className="p-3 bg-gray-850 rounded-lg text-white">
                         {item.icon}
                       </div>
                       <h3 className="font-semibold text-xl text-white">{item.title}</h3>
@@ -241,7 +241,7 @@ export default function PaymentMethods() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="mt-10 bg-gray-800 p-6 rounded-xl shadow-elegant"
+              className="mt-10 bg-black p-6 rounded-xl shadow-elegant"
             >
               <h3 className="font-semibold text-xl mb-6 text-white">Ciclo de projeto</h3>
               
@@ -253,7 +253,7 @@ export default function PaymentMethods() {
                   { step: 4, title: "Lançamento", duration: "1 semana" }
                 ].map((phase, index) => (
                   <div key={index} className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-850 flex items-center justify-center text-white font-bold">
                       {phase.step}
                     </div>
                     <div className="flex-grow border-b border-gray-700 pb-4">
@@ -273,7 +273,7 @@ export default function PaymentMethods() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="mt-10 bg-gray-800 rounded-xl p-6"
+              className="mt-10 bg-black rounded-xl p-6"
             >
               <div className="flex items-center gap-3 mb-4">
                 <img src="https://api.iconify.design/simple-icons:cora.svg?color=white" alt="Cora Bank" className="h-6 w-6" />

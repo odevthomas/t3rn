@@ -1,13 +1,12 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight, Play, CheckCircle } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="min-h-screen py-24 relative overflow-hidden bg-white dark:bg-gray-950">
+    <section id="home" className="min-h-screen py-24 relative overflow-hidden bg-white dark:bg-black">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900 -z-10"></div>
-      
+      <div className="absolute inset-0 bg-gradient-to-b from-green-50 to-white dark:from-gray-950 dark:to-gray-900 -z-10"></div>
+
       <div className="container px-4 md:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -16,20 +15,20 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm font-medium mb-6">
-              <span className="bg-gray-900 dark:bg-white w-2 h-2 rounded-full mr-2 animate-soft-pulse"></span>
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-green-600 to-green-500 text-white text-sm font-medium mb-6">
+              <span className="bg-white w-2 h-2 rounded-full mr-2 animate-pulse"></span>
               Soluções Web Premiadas
             </div>
-            
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-cashDisplay tracking-tight font-bold text-gray-900 dark:text-white mb-6">
-              Transforme sua <span className="text-gradient-gray">presença digital</span> com tecnologia de ponta
+              Transforme sua <span className="text-gradient">presença digital</span> com tecnologia de ponta
             </h1>
-            
+
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl">
-              Desenvolvemos soluções digitais que convertem visitantes em clientes, 
+              Desenvolvemos soluções digitais que convertem visitantes em clientes,
               com design moderno e performance excepcional.
             </p>
-            
+
             {/* Key Benefits */}
             <div className="space-y-3 mb-10">
               {[
@@ -37,32 +36,32 @@ export default function HeroSection() {
                 "Suporte técnico 24/7",
                 "Integração com WhatsApp e sistemas"
               ].map((benefit, i) => (
-                <motion.div 
+                <motion.div
                   key={i}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: 0.9 + i * 0.1 }}
                   className="flex items-center text-gray-700 dark:text-gray-300"
                 >
-                  <CheckCircle className="w-5 h-5 mr-2 text-gray-900 dark:text-gray-100" />
+                  <CheckCircle className="w-5 h-5 mr-2 text-green-600 dark:text-green-400" />
                   <span>{benefit}</span>
                 </motion.div>
               ))}
             </div>
-            
+
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
-              <motion.a 
+              <motion.a
                 href="#contact"
-                className="px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-lg hover:shadow-lg flex items-center gap-2 transition-all hover:gap-3"
+                className="px-6 py-3 bg-gradient-to-r from-green-600 to-green-500 text-white font-medium rounded-lg hover:shadow-xl flex items-center gap-2 transition-all hover:gap-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <span>Solicitar orçamento</span>
                 <ArrowRight className="w-4 h-4" />
               </motion.a>
-              
-              <motion.a 
+
+              <motion.a
                 href="#projects"
                 className="px-6 py-3 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-medium rounded-lg hover:shadow-md flex items-center gap-2 transition-all"
                 whileHover={{ scale: 1.05 }}
@@ -72,7 +71,7 @@ export default function HeroSection() {
                 <span>Ver demonstração</span>
               </motion.a>
             </div>
-            
+
             {/* Social Proof */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -82,9 +81,9 @@ export default function HeroSection() {
             >
               <div className="flex -space-x-3">
                 {[1, 2, 3, 4].map((i) => (
-                  <img 
+                  <img
                     key={i}
-                    src={`https://randomuser.me/api/portraits/${i % 2 === 0 ? 'men' : 'women'}/${20 + i}.jpg`} 
+                    src={`https://randomuser.me/api/portraits/${i % 2 === 0 ? 'men' : 'women'}/${20 + i}.jpg`}
                     alt={`Client ${i}`}
                     className="w-10 h-10 rounded-full border-2 border-white dark:border-gray-900 object-cover"
                   />
@@ -104,7 +103,7 @@ export default function HeroSection() {
               </div>
             </motion.div>
           </motion.div>
-          
+
           {/* Product Showcase */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -113,10 +112,10 @@ export default function HeroSection() {
             className="relative hidden lg:block"
           >
             {/* Device Frame */}
-            <div className="relative mx-auto w-[320px] h-[650px] bg-gray-900 rounded-[40px] border-[10px] border-gray-800 shadow-2xl overflow-hidden">
+            <div className="relative mx-auto w-[320px] h-[650px] bg-gray-900 rounded-[40px] border-[10px] border-gray-800 shadow-xl overflow-hidden">
               {/* Notch */}
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-gray-800 rounded-b-xl z-10"></div>
-              
+
               {/* Screen Content */}
               <div className="h-full w-full overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-black">
                 {/* App UI */}
@@ -138,7 +137,7 @@ export default function HeroSection() {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Dashboard Preview */}
                   <div className="mb-5">
                     <h2 className="text-lg font-bold text-gray-800 dark:text-white mb-3">Seus Projetos</h2>
@@ -148,7 +147,7 @@ export default function HeroSection() {
                         <span className="text-xs text-gray-500">85%</span>
                       </div>
                       <div className="w-full h-1.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden mb-4">
-                        <div className="h-full bg-gray-800 dark:bg-gray-400 rounded-full" style={{width: "85%"}}></div>
+                        <div className="h-full bg-gray-800 dark:bg-gray-400 rounded-full" style={{ width: "85%" }}></div>
                       </div>
                       <div className="flex justify-between items-center">
                         <div>
@@ -165,13 +164,10 @@ export default function HeroSection() {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Statistics */}
                   <div className="grid grid-cols-2 gap-3 mb-5">
-                    {[
-                      { label: "Tráfego", value: "1.4k", change: "+12%" },
-                      { label: "Conversões", value: "512", change: "+8%" }
-                    ].map((stat, i) => (
+                    {[{ label: "Tráfego", value: "1.4k", change: "+12%" }, { label: "Conversões", value: "512", change: "+8%" }].map((stat, i) => (
                       <div key={i} className="bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-sm">
                         <span className="text-xs text-gray-500">{stat.label}</span>
                         <div className="flex items-end justify-between">
@@ -181,7 +177,7 @@ export default function HeroSection() {
                       </div>
                     ))}
                   </div>
-                  
+
                   {/* Recent Activity */}
                   <div>
                     <h2 className="text-lg font-bold text-gray-800 dark:text-white mb-3">Atividade Recente</h2>
@@ -209,13 +205,13 @@ export default function HeroSection() {
                 </div>
               </div>
             </div>
-            
+
             {/* Decorative Elements */}
-            <div className="absolute -bottom-6 -right-16 w-40 h-40 bg-gray-100 dark:bg-gray-800 rounded-full opacity-70 blur-3xl"></div>
-            <div className="absolute -top-10 -left-10 w-32 h-32 bg-gray-100 dark:bg-gray-800 rounded-full opacity-70 blur-3xl"></div>
+            <div className="absolute -bottom-6 -right-16 w-40 h-40 bg-gradient-to-r from-green-600 to-green-500 rounded-full opacity-70 blur-3xl"></div>
+            <div className="absolute -top-10 -left-10 w-32 h-32 bg-gradient-to-r from-green-600 to-green-500 rounded-full opacity-70 blur-3xl"></div>
           </motion.div>
         </div>
-        
+
         {/* Trusted by logos */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -231,7 +227,7 @@ export default function HeroSection() {
               "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png",
               "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_logo.svg/2560px-Microsoft_logo.svg.png"
             ].map((logo, index) => (
-              <img 
+              <img
                 key={index}
                 src={logo}
                 alt={`Client ${index + 1}`}

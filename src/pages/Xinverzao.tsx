@@ -36,7 +36,7 @@ const Xinverzao = () => {
             <h1 className="text-xl font-bold hidden md:block">Dashboard T3RN</h1>
           </div>
           <div>
-            <Link to="/admin" className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">
+            <Link to="/admin" className="bg-black hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">
               Acessar CRM
             </Link>
           </div>
@@ -56,14 +56,14 @@ const Xinverzao = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className="bg-gray-900 p-6 rounded-xl border border-gray-800 shadow-elegant"
+              className="bg-black p-6 rounded-xl border border-gray-800 shadow-elegant"
             >
               <div className="flex justify-between">
                 <div>
                   <p className="text-gray-400">Usuários</p>
                   <p className="text-3xl font-bold mt-1">752</p>
                 </div>
-                <div className="p-3 bg-gray-800 rounded-full">
+                <div className="p-3 bg-black rounded-full">
                   <Users className="h-6 w-6 text-gray-300" />
                 </div>
               </div>
@@ -74,14 +74,14 @@ const Xinverzao = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.3 }}
-              className="bg-gray-900 p-6 rounded-xl border border-gray-800 shadow-elegant"
+              className="bg-black p-6 rounded-xl border border-gray-800 shadow-elegant"
             >
               <div className="flex justify-between">
                 <div>
                   <p className="text-gray-400">Mensagens</p>
                   <p className="text-3xl font-bold mt-1">128</p>
                 </div>
-                <div className="p-3 bg-gray-800 rounded-full">
+                <div className="p-3 bg-black rounded-full">
                   <MessageSquare className="h-6 w-6 text-gray-300" />
                 </div>
               </div>
@@ -92,14 +92,14 @@ const Xinverzao = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.3 }}
-              className="bg-gray-900 p-6 rounded-xl border border-gray-800 shadow-elegant"
+              className="bg-black p-6 rounded-xl border border-gray-800 shadow-elegant"
             >
               <div className="flex justify-between">
                 <div>
                   <p className="text-gray-400">Taxa de Conversão</p>
                   <p className="text-3xl font-bold mt-1">24%</p>
                 </div>
-                <div className="p-3 bg-gray-800 rounded-full">
+                <div className="p-3 bg-black rounded-full">
                   <PieChart className="h-6 w-6 text-gray-300" />
                 </div>
               </div>
@@ -110,14 +110,14 @@ const Xinverzao = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.3 }}
-              className="bg-gray-900 p-6 rounded-xl border border-gray-800 shadow-elegant"
+              className="bg-black p-6 rounded-xl border border-gray-800 shadow-elegant"
             >
               <div className="flex justify-between">
                 <div>
                   <p className="text-gray-400">Projetos Ativos</p>
                   <p className="text-3xl font-bold mt-1">18</p>
                 </div>
-                <div className="p-3 bg-gray-800 rounded-full">
+                <div className="p-3 bg-black rounded-full">
                   <BarChart className="h-6 w-6 text-gray-300" />
                 </div>
               </div>
@@ -137,7 +137,7 @@ const Xinverzao = () => {
             <Users className="h-5 w-5 text-gray-400" />
             <h2 className="text-xl font-bold">Últimos Usuários</h2>
           </div>
-          <div className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden">
+          <div className="bg-black rounded-xl border border-gray-800 overflow-hidden">
             <Table>
               <TableHeader>
                 <TableRow>
@@ -149,7 +149,7 @@ const Xinverzao = () => {
               </TableHeader>
               <TableBody>
                 {recentUsers.map((user) => (
-                  <TableRow key={user.id} className="hover:bg-gray-800">
+                  <TableRow key={user.id} className="hover:bg-black">
                     <TableCell className="font-medium">{user.name}</TableCell>
                     <TableCell>{user.email}</TableCell>
                     <TableCell>
@@ -177,17 +177,17 @@ const Xinverzao = () => {
             <MessageSquare className="h-5 w-5 text-gray-400" />
             <h2 className="text-xl font-bold">Análise de Mensagens</h2>
           </div>
-          <div className="bg-gray-900 p-6 rounded-xl border border-gray-800">
+          <div className="bg-black p-6 rounded-xl border border-gray-800">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {messageStats.map((stat) => (
-                <div key={stat.type} className="bg-gray-800 p-4 rounded-lg">
+                <div key={stat.type} className="bg-black p-4 rounded-lg">
                   <h3 className="text-gray-400">{stat.type}</h3>
                   <p className="text-2xl font-bold mt-1">{stat.value}</p>
                 </div>
               ))}
             </div>
             <div className="mt-6">
-              <div className="w-full bg-gray-800 rounded-full h-2.5 mb-1">
+              <div className="w-full bg-black rounded-full h-2.5 mb-1">
                 <div className="bg-gradient-to-r from-gray-500 to-gray-300 h-2.5 rounded-full" style={{ width: "66%" }}></div>
               </div>
               <div className="flex justify-between text-xs text-gray-400">

@@ -70,7 +70,7 @@ const Quote = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-800 text-gray-300 text-sm mb-4">
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-black text-gray-300 text-sm mb-4">
               <span>Orçamento Sem Compromisso</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold mb-6 text-white">
@@ -82,9 +82,9 @@ const Quote = () => {
             </p>
           </motion.div>
           
-          <div className="bg-gray-900 rounded-2xl border border-gray-800 overflow-hidden">
+          <div className="bg-black rounded-2xl border border-gray-800 overflow-hidden">
             {/* Progress Steps */}
-            <div className="bg-gray-800 p-4">
+            <div className="bg-black p-4">
               <div className="flex items-center justify-center">
                 {[1, 2, 3].map((s) => (
                   <div key={s} className="flex items-center">
@@ -137,7 +137,7 @@ const Quote = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
+                        className="w-full p-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
                       />
                     </div>
                     <div>
@@ -151,7 +151,7 @@ const Quote = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
+                        className="w-full p-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
                       />
                     </div>
                     <div>
@@ -165,7 +165,7 @@ const Quote = () => {
                         value={formData.phone}
                         onChange={handleInputChange}
                         required
-                        className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
+                        className="w-full p-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
                       />
                     </div>
                     <div>
@@ -178,7 +178,7 @@ const Quote = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
+                        className="w-full p-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
                       />
                     </div>
                   </div>
@@ -217,7 +217,7 @@ const Quote = () => {
                         value={formData.projectType}
                         onChange={handleInputChange}
                         required
-                        className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
+                        className="w-full p-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
                       >
                         <option value="">Selecione uma opção</option>
                         <option value="website">Website</option>
@@ -237,7 +237,7 @@ const Quote = () => {
                         name="budget"
                         value={formData.budget}
                         onChange={handleInputChange}
-                        className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
+                        className="w-full p-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
                       >
                         <option value="">Selecione uma opção</option>
                         <option value="under5k">Até R$ 5.000</option>
@@ -256,7 +256,7 @@ const Quote = () => {
                         name="timeline"
                         value={formData.timeline}
                         onChange={handleInputChange}
-                        className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
+                        className="w-full p-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
                       >
                         <option value="">Selecione uma opção</option>
                         <option value="urgent">Urgente (menos de 1 mês)</option>
@@ -279,14 +279,14 @@ const Quote = () => {
                       rows={5}
                       required
                       placeholder="Descreva seu projeto, objetivos, funcionalidades desejadas e quaisquer requisitos específicos..."
-                      className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
+                      className="w-full p-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
                     />
                   </div>
                   
                   <div className="pt-4 flex justify-between">
                     <button
                       onClick={() => goToStep(1)}
-                      className="px-6 py-3 bg-gray-800 text-white font-medium rounded-lg hover:bg-gray-700 transition-colors"
+                      className="px-6 py-3 bg-black text-white font-medium rounded-lg hover:bg-gray-700 transition-colors"
                     >
                       Voltar
                     </button>
@@ -322,7 +322,7 @@ const Quote = () => {
                     Entraremos em contato em até 24 horas úteis.
                   </p>
                   
-                  <div className="bg-gray-800 p-6 rounded-lg max-w-md mx-auto">
+                  <div className="bg-black p-6 rounded-lg max-w-md mx-auto">
                     <h3 className="text-lg font-medium mb-4">Próximos passos:</h3>
                     <div className="space-y-3 text-left">
                       <div className="flex items-start">
@@ -355,7 +355,7 @@ const Quote = () => {
                   <div className="mt-8">
                     <a 
                       href="/"
-                      className="px-6 py-3 bg-gray-800 text-white font-medium rounded-lg hover:bg-gray-700 transition-colors"
+                      className="px-6 py-3 bg-black text-white font-medium rounded-lg hover:bg-gray-700 transition-colors"
                     >
                       Voltar para a página inicial
                     </a>
@@ -387,10 +387,10 @@ const Quote = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-900 border border-gray-800 rounded-xl p-6"
+                  className="bg-black border border-gray-800 rounded-xl p-6"
                 >
                   <div className="flex items-center mb-4">
-                    <div className="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                    <div className="bg-black w-10 h-10 rounded-full flex items-center justify-center mr-3">
                       <span className="text-white text-lg">✓</span>
                     </div>
                     <h3 className="text-lg font-medium">{item.title}</h3>

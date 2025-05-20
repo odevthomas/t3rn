@@ -113,7 +113,7 @@ const Admin = () => {
             <h1 className="text-xl font-bold hidden md:block">CRM T3RN</h1>
           </div>
           <div>
-            <Link to="/xinverzao" className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">
+            <Link to="/xinverzao" className="bg-black hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">
               Ver Dashboard
             </Link>
           </div>
@@ -133,17 +133,17 @@ const Admin = () => {
               <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
               <Input
                 placeholder="Buscar clientes..."
-                className="pl-10 bg-gray-900 border-gray-800 text-white"
+                className="pl-10 bg-black border-gray-800 text-white"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
             <div className="flex gap-2">
-              <button className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-colors">
+              <button className="bg-black hover:bg-gray-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-colors">
                 <UserPlus size={18} />
                 <span className="hidden md:inline">Novo Cliente</span>
               </button>
-              <button className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-colors">
+              <button className="bg-black hover:bg-gray-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-colors">
                 <MessageSquare size={18} />
                 <span className="hidden md:inline">Nova Mensagem</span>
               </button>
@@ -157,7 +157,7 @@ const Admin = () => {
               className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap ${
                 activeTab === "clients"
                   ? "bg-gray-700 text-white"
-                  : "bg-gray-900 text-gray-400 hover:bg-gray-800"
+                  : "bg-black text-gray-400 hover:bg-black"
               }`}
             >
               <span className="flex items-center gap-2">
@@ -170,7 +170,7 @@ const Admin = () => {
               className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap ${
                 activeTab === "messages"
                   ? "bg-gray-700 text-white"
-                  : "bg-gray-900 text-gray-400 hover:bg-gray-800"
+                  : "bg-black text-gray-400 hover:bg-black"
               }`}
             >
               <span className="flex items-center gap-2">
@@ -186,7 +186,7 @@ const Admin = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden"
+            className="bg-black rounded-xl border border-gray-800 overflow-hidden"
           >
             <Table>
               <TableHeader>
@@ -201,7 +201,7 @@ const Admin = () => {
               </TableHeader>
               <TableBody>
                 {filteredCustomers.map((customer) => (
-                  <TableRow key={customer.id} className="hover:bg-gray-800">
+                  <TableRow key={customer.id} className="hover:bg-black">
                     <TableCell className="font-medium">{customer.name}</TableCell>
                     <TableCell className="hidden md:table-cell">{customer.email}</TableCell>
                     <TableCell className="hidden lg:table-cell">{customer.phone}</TableCell>
@@ -225,7 +225,7 @@ const Admin = () => {
                               <Search className="h-4 w-4" />
                             </button>
                           </HoverCardTrigger>
-                          <HoverCardContent className="bg-gray-800 border border-gray-700 text-white w-80">
+                          <HoverCardContent className="bg-black border border-gray-700 text-white w-80">
                             <div className="space-y-2">
                               <h4 className="font-medium">{customer.name}</h4>
                               <p className="text-sm text-gray-400">{customer.email}</p>
@@ -262,7 +262,7 @@ const Admin = () => {
               {recentMessages.map((message) => (
                 <div 
                   key={message.id} 
-                  className="bg-gray-900 rounded-xl border border-gray-800 p-4 hover:bg-gray-800 transition-colors cursor-pointer"
+                  className="bg-black rounded-xl border border-gray-800 p-4 hover:bg-black transition-colors cursor-pointer"
                 >
                   <div className="flex justify-between items-start mb-2">
                     <div>
@@ -274,7 +274,7 @@ const Admin = () => {
                   <h4 className="text-sm font-medium mb-2">{message.subject}</h4>
                   <p className="text-sm text-gray-300 line-clamp-2">{message.content}</p>
                   <div className="flex justify-end mt-4">
-                    <button className="px-3 py-1 bg-gray-800 hover:bg-gray-700 rounded text-sm flex items-center gap-1 transition-colors">
+                    <button className="px-3 py-1 bg-black hover:bg-gray-700 rounded text-sm flex items-center gap-1 transition-colors">
                       <MessageSquare size={14} />
                       Responder
                     </button>

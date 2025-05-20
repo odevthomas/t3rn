@@ -37,14 +37,14 @@ export default function Notification({ delay = 3000 }: NotificationProps) {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: 300, opacity: 0 }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          className="fixed top-24 right-4 z-40 max-w-sm w-full bg-white dark:bg-gray-800 rounded-xl shadow-elegant overflow-hidden border border-gray-200 dark:border-gray-700"
+          className="fixed top-24 right-4 z-40 max-w-sm w-full bg-white dark:bg-black rounded-xl shadow-elegant overflow-hidden border border-gray-200 dark:border-gray-700"
         >
           {/* Progress bar */}
           <motion.div 
             initial={{ width: "100%" }}
             animate={{ width: "0%" }}
             transition={{ duration: 8, ease: "linear" }}
-            className="h-1 bg-gray-900 dark:bg-gray-200"
+            className="h-1 bg-black dark:bg-gray-200"
           />
           
           <div className="p-4">
@@ -73,7 +73,7 @@ export default function Notification({ delay = 3000 }: NotificationProps) {
               </div>
               <button 
                 onClick={handleWhatsAppClick}
-                className="flex items-center gap-1 text-sm bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-3 py-1.5 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+                className="flex items-center gap-1 text-sm bg-black dark:bg-gray-100 text-white dark:text-gray-900 px-3 py-1.5 rounded-lg hover:bg-black dark:hover:bg-gray-200 transition-colors"
               >
                 <span>Falar agora</span>
                 <ArrowRight className="w-3 h-3" />

@@ -79,7 +79,7 @@ export default function AIChat() {
       {/* Chat Toggle Button */}
       <button
         onClick={toggleChat}
-        className="fixed bottom-6 right-6 z-40 w-16 h-16 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 rounded-full shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center"
+        className="fixed bottom-6 right-6 z-40 w-16 h-16 bg-black dark:bg-gray-100 text-white dark:text-gray-900 rounded-full shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center"
         aria-label="Toggle chat"
       >
         {isOpen ? (
@@ -102,7 +102,7 @@ export default function AIChat() {
             {/* Header */}
             <div className="bg-gray-100 dark:bg-gray-700 p-4 border-b border-gray-200 dark:border-gray-600">
               <div className="flex items-center">
-                <div className="w-10 h-10 bg-gray-900 dark:bg-gray-100 rounded-full flex items-center justify-center text-white dark:text-gray-900 mr-3">
+                <div className="w-10 h-10 bg-black dark:bg-gray-100 rounded-full flex items-center justify-center text-white dark:text-gray-900 mr-3">
                   <span className="font-bold">T3</span>
                 </div>
                 <div>
@@ -123,7 +123,7 @@ export default function AIChat() {
                     <div 
                       className={`max-w-[80%] p-3 rounded-xl ${
                         message.isUser 
-                          ? 'bg-gray-900 text-white dark:bg-gray-100 dark:text-gray-900 rounded-br-none' 
+                          ? 'bg-black text-white dark:bg-gray-100 dark:text-gray-900 rounded-br-none' 
                           : 'bg-gray-100 text-gray-900 dark:bg-gray-700 dark:text-gray-100 rounded-bl-none'
                       }`}
                     >
@@ -160,7 +160,7 @@ export default function AIChat() {
                 />
                 <button
                   type="submit"
-                  className="p-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="p-2 bg-black dark:bg-gray-100 text-white dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   disabled={!input.trim() || isLoading}
                 >
                   <Send className="w-5 h-5" />

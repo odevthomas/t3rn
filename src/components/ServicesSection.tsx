@@ -1,4 +1,3 @@
-
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { Globe, Code, MessageSquare, Brain, ArrowRight, CheckCircle, Settings, Rocket, Star, ArrowLeft } from "lucide-react";
@@ -7,7 +6,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 export default function ServicesSection() {
   const services = [
     {
-      icon: <Globe className="w-10 h-10" />,
+      icon: <Globe className="w-10 h-10 text-green-500" />, // Cor verde
       title: "Sites Profissionais",
       description: "Sites responsivos e otimizados para buscadores, com design moderno e foco em conversão.",
       features: [
@@ -21,7 +20,7 @@ export default function ServicesSection() {
       popular: false
     },
     {
-      icon: <Code className="w-10 h-10" />,
+      icon: <Code className="w-10 h-10 text-green-500" />, // Cor verde
       title: "Sistemas Web",
       description: "Sistemas personalizados para automatizar processos e aumentar a eficiência do seu negócio.",
       features: [
@@ -35,7 +34,7 @@ export default function ServicesSection() {
       popular: true
     },
     {
-      icon: <MessageSquare className="w-10 h-10" />,
+      icon: <MessageSquare className="w-10 h-10 text-green-500" />, // Cor verde
       title: "Automação WhatsApp",
       description: "Soluções de atendimento automatizado via WhatsApp integradas aos seus sistemas.",
       features: [
@@ -49,7 +48,7 @@ export default function ServicesSection() {
       popular: false
     },
     {
-      icon: <Brain className="w-10 h-10" />,
+      icon: <Brain className="w-10 h-10 text-green-500" />, // Cor verde
       title: "Soluções com IA",
       description: "Desenvolvimento de soluções com inteligência artificial para otimizar processos.",
       features: [
@@ -63,7 +62,7 @@ export default function ServicesSection() {
       popular: false
     },
     {
-      icon: <Settings className="w-10 h-10" />,
+      icon: <Settings className="w-10 h-10 text-green-500" />, // Cor verde
       title: "DevOps e Infraestrutura",
       description: "Implementação e gerenciamento de infraestrutura em nuvem para alta disponibilidade.",
       features: [
@@ -77,7 +76,7 @@ export default function ServicesSection() {
       popular: false
     },
     {
-      icon: <Rocket className="w-10 h-10" />,
+      icon: <Rocket className="w-10 h-10 text-green-500" />, // Cor verde
       title: "Marketing Digital",
       description: "Estratégias de marketing digital para impulsionar sua presença online e gerar leads qualificados.",
       features: [
@@ -91,7 +90,7 @@ export default function ServicesSection() {
       popular: false
     },
     {
-      icon: <Star className="w-10 h-10" />,
+      icon: <Star className="w-10 h-10 text-green-500" />, // Cor verde
       title: "UX/UI Design",
       description: "Design de interfaces focado em experiência do usuário para maximizar conversões e engajamento.",
       features: [
@@ -119,18 +118,18 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-800 text-gray-300 text-sm mb-4">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-green-600 to-green-500 text-white text-sm font-medium mb-6">
             <span>Serviços Exclusivos</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Soluções digitais que <span className="text-gradient-gray">geram resultados</span>
+            Soluções digitais que geram resultados 
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Oferecemos serviços completos em desenvolvimento digital, criados especificamente 
+            Oferecemos serviços completos em desenvolvimento digital, criados especificamente
             para impulsionar seu negócio e maximizar seu ROI.
           </p>
         </motion.div>
-        
+
         {/* Featured Service */}
         {featuredService && (
           <motion.div
@@ -140,10 +139,10 @@ export default function ServicesSection() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-elegant border border-gray-800">
+            <div className="bg-black rounded-2xl overflow-hidden shadow-elegant border border-gray-800">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="p-8 lg:p-12">
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-800 text-white text-sm font-medium mb-6">
+                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-black text-white text-sm font-medium mb-6">
                     Mais Procurado
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">
@@ -152,36 +151,36 @@ export default function ServicesSection() {
                   <p className="text-lg text-gray-300 mb-6">
                     {featuredService.description}
                   </p>
-                  
+
                   <div className="mb-8">
                     <h4 className="font-medium text-white mb-4">Por que escolher este serviço:</h4>
                     <ul className="space-y-3">
                       {featuredService.features.map((feature, i) => (
                         <li key={i} className="flex items-start">
-                          <CheckCircle className="w-5 h-5 text-white mr-3 mt-0.5" />
+                          <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5" /> {/* Cor verde */}
                           <span className="text-gray-300">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div className="flex flex-col sm:flex-row items-center gap-4">
                     <div className="text-2xl font-bold text-white">
                       {featuredService.price}
                     </div>
-                    <a 
-                      href="/orcamento" 
-                      className="px-6 py-3 bg-white text-black font-medium rounded-lg hover:shadow-lg flex items-center gap-2 transition-all"
+                    <a
+                      href="/orcamento"
+                      className="px-6 py-3 bg-green-500 text-white font-medium rounded-lg hover:shadow-lg flex items-center gap-2 transition-all" // Cor verde para o botão
                     >
                       <span>Solicitar proposta</span>
                       <ArrowRight className="w-4 h-4" />
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="relative h-64 lg:h-auto overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&auto=format&fit=crop" 
+                  <img
+                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&auto=format&fit=crop"
                     alt={featuredService.title}
                     className="w-full h-full object-cover"
                   />
@@ -198,7 +197,7 @@ export default function ServicesSection() {
             </div>
           </motion.div>
         )}
-        
+
         {/* Services Carousel */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -212,16 +211,16 @@ export default function ServicesSection() {
             <div className="flex items-center gap-4 text-sm text-gray-400">
               <span>Deslize para ver mais</span>
               <div className="flex items-center gap-2">
-                <button className="carousel-prev p-2 rounded-full bg-gray-900 border border-gray-800 hover:bg-gray-800 transition-colors">
+                <button className="carousel-prev p-2 rounded-full bg-black border border-gray-800 hover:bg-black transition-colors">
                   <ArrowLeft className="w-4 h-4" />
                 </button>
-                <button className="carousel-next p-2 rounded-full bg-gray-900 border border-gray-800 hover:bg-gray-800 transition-colors">
+                <button className="carousel-next p-2 rounded-full bg-black border border-gray-800 hover:bg-black transition-colors">
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </div>
           </div>
-          
+
           <Carousel
             opts={{ align: "start", loop: true }}
             className="w-full"
@@ -229,33 +228,33 @@ export default function ServicesSection() {
             <CarouselContent className="-ml-4">
               {regularServices.map((service, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div className="h-full bg-gray-900 p-6 rounded-2xl border border-gray-800 shadow-elegant hover:shadow-lg transition-shadow">
-                    <div className="mb-6 p-4 bg-gray-800 rounded-xl inline-block">
+                  <div className="h-full bg-black p-6 rounded-2xl border border-gray-800 shadow-elegant hover:shadow-lg transition-shadow">
+                    <div className="mb-6 p-4 bg-black rounded-xl inline-block">
                       {service.icon}
                     </div>
-                    
+
                     <h3 className="text-xl font-bold mb-2 text-white">{service.title}</h3>
                     <p className="text-gray-400 mb-6 line-clamp-3">{service.description}</p>
-                    
+
                     <div className="mb-6">
                       <h4 className="font-medium text-sm text-gray-300 mb-3">Por que escolher:</h4>
                       <ul className="space-y-2">
                         {service.features.slice(0, 3).map((feature, i) => (
                           <li key={i} className="flex items-start text-sm">
-                            <CheckCircle className="w-4 h-4 text-white mr-2 mt-0.5 flex-shrink-0" />
+                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" /> {/* Cor verde */}
                             <span className="text-gray-400">{feature}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
-                    
+
                     <div className="mt-auto">
                       <div className="text-lg font-semibold text-white mb-4">
                         {service.price}
                       </div>
                       <a
-                        href="/orcamento" 
-                        className="inline-flex items-center gap-2 text-white hover:underline"
+                        href="/orcamento"
+                        className="inline-flex items-center gap-2 text-green-500 hover:underline" // Cor verde no link
                       >
                         <span>Saiba mais</span>
                         <ArrowRight className="w-4 h-4" />
@@ -271,7 +270,8 @@ export default function ServicesSection() {
             </div>
           </Carousel>
         </motion.div>
-        
+   
+
         {/* Why Choose Our Services */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -281,11 +281,11 @@ export default function ServicesSection() {
           className="mt-20"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="bg-gray-900 rounded-2xl p-8 border border-gray-800">
+            <div className="bg-black rounded-2xl p-8 border border-gray-800">
               <h3 className="text-2xl font-bold mb-6 text-white">
                 Por que escolher nossos serviços?
               </h3>
-              
+
               <div className="space-y-6">
                 {[
                   {
@@ -306,7 +306,7 @@ export default function ServicesSection() {
                   }
                 ].map((item, i) => (
                   <div key={i} className="flex">
-                    <div className="bg-gray-800 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4 flex-shrink-0">
+                    <div className="bg-black w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4 flex-shrink-0">
                       {i + 1}
                     </div>
                     <div>
@@ -316,19 +316,19 @@ export default function ServicesSection() {
                   </div>
                 ))}
               </div>
-              
+
               <div className="mt-8">
-                <a 
+                <a
                   href="/diferenciais"
-                  className="px-6 py-3 bg-gray-800 text-white hover:bg-gray-700 transition-colors font-medium rounded-lg flex items-center gap-2 w-fit"
+                  className="px-6 py-3 bg-black text-white hover:bg-gray-850 transition-colors font-medium rounded-lg flex items-center gap-2 w-fit"
                 >
                   <span>Ver nossos diferenciais</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
             </div>
-            
-            <div className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+
+            <div className="bg-black rounded-2xl overflow-hidden border border-gray-800">
               <div className="p-8">
                 <h3 className="text-2xl font-bold mb-6 text-white">
                   Atendimento Personalizado
@@ -336,7 +336,7 @@ export default function ServicesSection() {
                 <p className="text-gray-300 mb-6">
                   Nossa equipe está pronta para entender suas necessidades específicas e criar uma solução digital sob medida para o seu negócio.
                 </p>
-                
+
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
@@ -351,25 +351,25 @@ export default function ServicesSection() {
                     <span className="text-white">Atendimento personalizado do início ao fim</span>
                   </div>
                 </div>
-                
+
                 <div className="flex space-x-4">
-                  <a 
-                    href="/orcamento" 
+                  <a
+                    href="/orcamento"
                     className="px-6 py-3 bg-white text-black hover:bg-gray-100 transition-colors font-medium rounded-lg"
                   >
                     Solicitar orçamento
                   </a>
-                  <a 
-                    href="/suporte" 
-                    className="px-6 py-3 bg-gray-800 text-white hover:bg-gray-700 transition-colors font-medium rounded-lg"
+                  <a
+                    href="/suporte"
+                    className="px-6 py-3 bg-black text-white hover:bg-gray-850 transition-colors font-medium rounded-lg"
                   >
                     Falar com especialista
                   </a>
                 </div>
               </div>
-              
+
               <div className="h-64 overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black z-10"></div>
+                <div className="absolute inset-0 bg-black from-transparent to-black z-10"></div>
                 <img
                   src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop"
                   alt="Equipe de atendimento"
@@ -379,14 +379,14 @@ export default function ServicesSection() {
             </div>
           </div>
         </motion.div>
-        
+
         {/* Technology Banner */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-20 bg-gray-900 p-8 md:p-12 rounded-2xl border border-gray-800"
+          className="mt-20 bg-black p-8 md:p-12 rounded-2xl border border-gray-800"
         >
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
@@ -394,16 +394,16 @@ export default function ServicesSection() {
                 Tecnologias de <span className="text-gradient-gray">última geração</span>
               </h3>
               <p className="text-gray-300 max-w-lg">
-                Utilizamos as tecnologias mais avançadas do mercado para criar soluções 
+                Utilizamos as tecnologias mais avançadas do mercado para criar soluções
                 escaláveis, seguras e de alto desempenho.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-3 sm:grid-cols-5 gap-6">
               {[
                 "https://cdn.worldvectorlogo.com/logos/react-2.svg",
                 "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg",
-                "https://cdn.worldvectorlogo.com/logos/typescript.svg", 
+                "https://cdn.worldvectorlogo.com/logos/typescript.svg",
                 "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
                 "https://cdn.worldvectorlogo.com/logos/firebase-1.svg"
               ].map((tech, index) => (
@@ -414,7 +414,7 @@ export default function ServicesSection() {
             </div>
           </div>
         </motion.div>
-      </div>
+      </div>  
     </section>
   );
 }

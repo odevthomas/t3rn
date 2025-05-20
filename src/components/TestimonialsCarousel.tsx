@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { User } from 'lucide-react';
@@ -38,7 +37,7 @@ export default function TestimonialsCarousel({ autoPlay = true }: TestimonialsCa
   const [current, setCurrent] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(autoPlay);
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
-  
+
   const next = () => {
     setCurrent((current + 1) % testimonials.length);
   };
@@ -49,35 +48,31 @@ export default function TestimonialsCarousel({ autoPlay = true }: TestimonialsCa
 
   const goTo = (index: number) => {
     setCurrent(index);
-    // Pause autoplay temporarily when manually navigating
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(autoPlay), 5000);
   };
-  
+
   useEffect(() => {
-    // Reset auto-play state when prop changes
     setIsAutoPlaying(autoPlay);
   }, [autoPlay]);
-  
+
   useEffect(() => {
-    // Clear any existing interval
     if (autoPlayRef.current) {
       clearInterval(autoPlayRef.current);
       autoPlayRef.current = null;
     }
-    
-    // Set up new interval if autoplay is enabled
+
     if (isAutoPlaying) {
       autoPlayRef.current = setInterval(next, 5000);
     }
-    
+
     return () => {
       if (autoPlayRef.current) clearInterval(autoPlayRef.current);
     };
   }, [isAutoPlaying, current]);
 
   return (
-    <section id="testimonials" className="py-24 bg-gray-50 dark:bg-t3rn-black">
+    <section id="testimonials" className="py-24 bg-black">
       <div className="container px-4 md:px-8 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
@@ -86,17 +81,17 @@ export default function TestimonialsCarousel({ autoPlay = true }: TestimonialsCa
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="inline-block px-3 py-1 bg-gray-200 dark:bg-gray-800 rounded-full text-sm font-medium text-gray-600 dark:text-gray-400 mb-4">
+          <span className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-green-600 to-green-500 text-white text-sm mb-4">
             Depoimentos
           </span>
-          <h2 className="text-3xl md:text-4xl font-cashDisplay font-bold text-gray-900 dark:text-gray-100 mb-4">
+          <h2 className="text-3xl md:text-4xl font-cashDisplay font-bold text-white mb-4">
             O que nossos clientes dizem
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-400 max-w-2xl mx-auto">
             Conheça as experiências reais de empresas que transformaram suas ideias em soluções digitais de sucesso com a T3RN Desenvolvimento.
           </p>
         </motion.div>
-        
+
         <div className="relative max-w-4xl mx-auto">
           {/* Main testimonial */}
           <motion.div
@@ -105,14 +100,14 @@ export default function TestimonialsCarousel({ autoPlay = true }: TestimonialsCa
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 md:p-12"
+            className="bg-black border border-gray-600 rounded-2xl shadow-lg p-8 md:p-12"
           >
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="md:w-1/3 flex flex-col items-center">
                 {testimonials[current].image ? (
-                  <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-gray-100 dark:border-gray-700 mb-4">
-                    <img 
-                      src={testimonials[current].image} 
+                  <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-gray-600 mb-4">
+                    <img
+                      src={testimonials[current].image}
                       alt={testimonials[current].name}
                       className="w-full h-full object-cover"
                     />
@@ -122,17 +117,18 @@ export default function TestimonialsCarousel({ autoPlay = true }: TestimonialsCa
                     <User className="w-12 h-12 text-gray-400" />
                   </div>
                 )}
-                <h3 className="font-semibold text-lg text-gray-900 dark:text-gray-100 text-center">
+                
+                <h3 className="font-semibold text-lg text-white text-center">
                   {testimonials[current].name}
                 </h3>
-                <p className="text-gray-500 dark:text-gray-400 text-sm text-center">
+                <p className="text-gray-400 text-sm text-center">
                   {testimonials[current].company}
                 </p>
               </div>
-              
+
               <div className="md:w-2/3">
-                <div className="text-5xl font-cashDisplay text-gray-200 dark:text-gray-700 mb-2">"</div>
-                <blockquote className="text-gray-700 dark:text-gray-300 text-lg italic mb-6">
+                <div className="text-5xl font-cashDisplay text-white mb-2">"</div>
+                <blockquote className="text-gray-200 text-lg italic mb-6">
                   {testimonials[current].text}
                 </blockquote>
                 <div className="flex items-center gap-1">
@@ -144,20 +140,20 @@ export default function TestimonialsCarousel({ autoPlay = true }: TestimonialsCa
                 </div>
               </div>
             </div>
-            
+
             {/* Navigation buttons */}
             <div className="flex justify-between mt-8">
-              <button 
+              <button
                 onClick={prev}
-                className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                className="p-2 rounded-full bg-gray-700 text-white hover:bg-gray-800 transition-colors"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
-              <button 
+              <button
                 onClick={next}
-                className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                className="p-2 rounded-full bg-gray-700 text-white hover:bg-gray-800 transition-colors"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -165,18 +161,17 @@ export default function TestimonialsCarousel({ autoPlay = true }: TestimonialsCa
               </button>
             </div>
           </motion.div>
-          
+
           {/* Indicators */}
           <div className="flex justify-center mt-6 space-x-2">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goTo(index)}
-                className={`w-2.5 h-2.5 rounded-full transition-all ${
-                  current === index 
-                    ? 'bg-gray-900 dark:bg-gray-200 w-6' 
-                    : 'bg-gray-300 dark:bg-gray-700'
-                }`}
+                className={`w-2.5 h-2.5 rounded-full transition-all ${current === index
+                    ? 'bg-gray-400 w-6'
+                    : 'bg-gray-600 dark:bg-gray-700'
+                  }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}

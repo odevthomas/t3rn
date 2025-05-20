@@ -42,7 +42,7 @@ const Support = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-800 text-gray-300 text-sm mb-4">
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-black text-gray-300 text-sm mb-4">
               <span>Suporte Técnico</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold mb-6 text-white">
@@ -84,9 +84,9 @@ const Support = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="bg-gray-900 border-gray-800 text-white h-full">
+                <Card className="bg-black border-gray-800 text-white h-full">
                   <CardHeader>
-                    <div className="bg-gray-800 p-3 rounded-lg inline-block mb-2">
+                    <div className="bg-black p-3 rounded-lg inline-block mb-2">
                       {item.icon}
                     </div>
                     <CardTitle className="text-xl">{item.title}</CardTitle>
@@ -109,7 +109,7 @@ const Support = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-gray-900 rounded-2xl p-8 md:p-12 border border-gray-800"
+            className="bg-black rounded-2xl p-8 md:p-12 border border-gray-800"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
               <div>
@@ -121,19 +121,19 @@ const Support = () => {
                 
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <div className="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                    <div className="bg-black w-10 h-10 rounded-full flex items-center justify-center mr-3">
                       <span className="text-white">1</span>
                     </div>
                     <p className="text-gray-300">Descreva seu problema em detalhes</p>
                   </div>
                   <div className="flex items-center">
-                    <div className="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                    <div className="bg-black w-10 h-10 rounded-full flex items-center justify-center mr-3">
                       <span className="text-white">2</span>
                     </div>
                     <p className="text-gray-300">Adicione capturas de tela se possível</p>
                   </div>
                   <div className="flex items-center">
-                    <div className="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                    <div className="bg-black w-10 h-10 rounded-full flex items-center justify-center mr-3">
                       <span className="text-white">3</span>
                     </div>
                     <p className="text-gray-300">Receba assistência personalizada</p>
@@ -152,7 +152,7 @@ const Support = () => {
                         type="text"
                         id="name"
                         required
-                        className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
+                        className="w-full p-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
                       />
                     </div>
                     <div>
@@ -163,7 +163,7 @@ const Support = () => {
                         type="email"
                         id="email"
                         required
-                        className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
+                        className="w-full p-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
                       />
                     </div>
                     <div>
@@ -172,7 +172,7 @@ const Support = () => {
                       </label>
                       <select
                         id="issue"
-                        className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
+                        className="w-full p-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
                       >
                         <option value="technical">Problema técnico</option>
                         <option value="billing">Faturamento</option>
@@ -188,7 +188,7 @@ const Support = () => {
                         id="message"
                         rows={5}
                         required
-                        className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
+                        className="w-full p-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-600"
                       ></textarea>
                     </div>
                     <button
@@ -199,7 +199,7 @@ const Support = () => {
                     </button>
                   </form>
                 ) : (
-                  <div className="bg-gray-800 p-8 rounded-lg text-center">
+                  <div className="bg-black p-8 rounded-lg text-center">
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}

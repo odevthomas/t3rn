@@ -118,6 +118,8 @@ const CustomerQuestionnaire = () => {
         <h2 className="text-3xl font-bold mb-2 text-center">Conte-nos sobre seu projeto</h2>
         <p className="text-gray-400 mb-10 text-center">Responda algumas perguntas para que possamos entender melhor suas necessidades</p>
         
+        <div className="absolute inset-0 bg-gradient-to-b from-green-50 to-white dark:from-gray-950 dark:to-gray-900 -z-10"></div>
+
         <div className="mb-8 flex justify-center">
           <div className="flex space-x-2">
             {Array.from({ length: totalSteps }).map((_, i) => (
@@ -128,14 +130,14 @@ const CustomerQuestionnaire = () => {
                     ? 'bg-gray-100' 
                     : i + 1 < currentStep 
                       ? 'bg-gray-500' 
-                      : 'bg-gray-800'
+                      : 'bg-black'
                 }`}
               />
             ))}
           </div>
         </div>
         
-        <Card className="border-gray-800 bg-gray-900 shadow-lg">
+        <Card className="border-gray-800 bg-black shadow-lg">
           <CardHeader>
             <CardTitle>
               {currentStep === 1 && "Informações Básicas"}

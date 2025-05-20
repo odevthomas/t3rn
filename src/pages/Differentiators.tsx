@@ -63,7 +63,7 @@ const Differentiators = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center"
+                  className="bg-black border border-gray-800 rounded-2xl p-6 text-center"
                 >
                   <div className="bg-gray-800 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                     {metric.icon}
@@ -136,7 +136,7 @@ const Differentiators = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-900 rounded-2xl p-8 border border-gray-800 h-full flex flex-col"
+                  className="bg-black rounded-2xl p-8 border border-gray-800 h-full flex flex-col"
                 >
                   <div className="bg-gray-800 p-4 rounded-xl inline-block mb-6">
                     {item.icon}
@@ -187,7 +187,7 @@ const Differentiators = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="bg-gray-900 border border-gray-800 rounded-xl p-6 flex flex-col items-center hover:border-gray-700 transition-colors"
+                  className="bg-black border border-gray-800 rounded-xl p-6 flex flex-col items-center hover:border-gray-700 transition-colors"
                 >
                   <img src={tech.logo} alt={tech.name} className="h-12 mb-4 object-contain" />
                   <span className="text-sm text-gray-300">{tech.name}</span>
@@ -254,7 +254,7 @@ const Differentiators = () => {
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       className="flex"
                     >
-                      <div className="bg-gray-900 w-12 h-12 rounded-lg flex items-center justify-center font-bold text-xl mr-4 flex-shrink-0 border border-gray-800">
+                      <div className="bg-black w-12 h-12 rounded-lg flex items-center justify-center font-bold text-xl mr-4 flex-shrink-0 border border-gray-800">
                         {step.number}
                       </div>
                       <div>
@@ -345,7 +345,7 @@ const Differentiators = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-900 rounded-2xl p-8 border border-gray-800"
+                  className="bg-black rounded-2xl p-8 border border-gray-800"
                 >
                   <div className="flex items-center mb-6">
                     <img 
