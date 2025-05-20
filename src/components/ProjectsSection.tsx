@@ -91,7 +91,7 @@ export default function ProjectsSection() {
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-green-500 to-green-600 text-white text-sm mb-4">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-black from-green-500 to-green-600 text-white text-sm mb-4">
             <span>Casos de Sucesso Comprovados</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
@@ -114,7 +114,7 @@ export default function ProjectsSection() {
             <button
               key={filter.value}
               onClick={() => setActiveFilter(filter.value)}
-              className={`px-4 py-2 rounded-lg text-sm transition-all ${activeFilter === filter.value
+              className={`px-4 py-2 rounded-lg border  text-sm transition-all ${activeFilter === filter.value
                   ? "bg-green-600 text-white font-medium shadow-sm"
                   : "bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-850"
                 }`}
@@ -133,7 +133,7 @@ export default function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 + 0.3 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-elegant group"
+              className="bg-white dark:bg-black rounded-2xl border boder-gray-500 overflow-hidden shadow-elegant group"
             >
               <div className="relative h-60 overflow-hidden">
                 <img
@@ -169,8 +169,8 @@ export default function ProjectsSection() {
                   <ul className="space-y-2">
                     {project.results.map((result, i) => (
                       <li key={i} className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-gray-900 dark:text-white mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-gray-600 dark:text-gray-300">{result}</span>
+                        <CheckCircle className="w-4 h-4 text-green-700 dark:text-green mr-2 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-green-700 dark:text-gray-300">{result}</span>
                       </li>
                     ))}
                   </ul>
@@ -181,7 +181,7 @@ export default function ProjectsSection() {
                   {project.tags.map(tag => (
                     <span
                       key={`${project.id}-${tag}`}
-                      className="text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-850 text-gray-600 dark:text-gray-300"
+                      className="text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-850 text-black dark:text-black"
                     >
                       {tag}
                     </span>

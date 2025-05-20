@@ -58,7 +58,7 @@ const Footer = () => {
               >
                 <div className="w-12 h-12 rounded-full bg-black  flex items-center justify-center mr-3">
                   {/* Logo image */}
-                  <img src="/favicon.ico" alt="Logo" className="w-80 h-80 mr-2" /> {/* Substitua o favicon.ico por uma imagem de logo */}
+                  <img src="/favicon.ico" alt="Logo" className="w-20 h-20 mr-2" /> {/* Substitua o favicon.ico por uma imagem de logo */}
                 </div>
               </motion.div>
 

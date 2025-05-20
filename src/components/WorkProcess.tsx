@@ -49,7 +49,7 @@ export default function WorkProcess() {
 
         <div className="relative">
           {/* Connection line */}
-          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-200 dark:bg-gray-700 -translate-y-1/2 hidden lg:block"></div>
+          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-green-200 dark:bg-green-700 -translate-y-1/2 hidden lg:block"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (
@@ -61,7 +61,7 @@ export default function WorkProcess() {
                 viewport={{ once: true }}
                 className="relative z-10"
               >
-                <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-elegant h-full flex flex-col items-center text-center hover:shadow-lg transition-all">
+                <div className="bg-white dark:bg-[#00001] p-8 rounded-2xl border border-gray-100 dark:border-[#00001] shadow-elegant h-full flex flex-col items-center text-center hover:shadow-lg transition-all">
                   {/* Step number */}
                   <div className="absolute -top-5 w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-lg">
                     {index + 1}
@@ -73,8 +73,8 @@ export default function WorkProcess() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">{step.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-300">{step.description}</p>
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-black">{step.title}</h3>
+                  <p className="text-black dark:text-black">{step.description}</p>
                 </div>
               </motion.div>
             ))}
