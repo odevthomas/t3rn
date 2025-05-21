@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { supabase } from '../integrations/supabase/client'; // Adjust the import path as necessary
-import { Session, User } from '@supabase/supabase-js';
+import { supabase } from '../integrations/supabase/client'; // Verifique se esse caminho está correto
+import type { Session, User } from '@supabase/supabase-js';
 
 export function useSupabaseAuth() {
   const [user, setUser] = useState<User | null>(null);
@@ -8,22 +8,22 @@ export function useSupabaseAuth() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // First set up the auth state listener
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (event, currentSession) => {
-        setSession(currentSession);
-        setUser(currentSession?.user ?? null);
-        setLoading(false);
+    // Listener para mudanças de autenticação
+    const {
+      data: { subscription }
+    } = supabase.auth.onAuthStateChange((event, currentSession) => {
+      setSession(currentSession);
+      setUser(currentSession?.user ?? null);
+      setLoading(false);
 
-        if (event === 'SIGNED_IN') {
-          console.log('User signed in:', currentSession?.user?.email);
-        } else if (event === 'SIGNED_OUT') {
-          console.log('User signed out');
-        }
+      if (event === 'SIGNED_IN') {
+        console.log('Usuário logado:', currentSession?.user?.email);
+      } else if (event === 'SIGNED_OUT') {
+        console.log('Usuário deslogado');
       }
-    );
+    });
 
-    // Then check for existing session
+    // Verifica sessão atual ao montar
     supabase.auth.getSession().then(({ data: { session: currentSession } }) => {
       setSession(currentSession);
       setUser(currentSession?.user ?? null);
@@ -31,15 +31,18 @@ export function useSupabaseAuth() {
     });
 
     return () => {
-      subscription.unsubscribe();
+      subscription?.unsubscribe();
     };
   }, []);
 
-  const signIn = async (email: string, password: string) => {
+  const signIn = async (email: string, password: string): Promise<{
+    data: any;
+    error: any;
+  }> => {
     try {
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
-        password,
+        password
       });
 
       if (error) throw error;
@@ -49,11 +52,14 @@ export function useSupabaseAuth() {
     }
   };
 
-  const signUp = async (email: string, password: string) => {
+  const signUp = async (email: string, password: string): Promise<{
+    data: any;
+    error: any;
+  }> => {
     try {
       const { data, error } = await supabase.auth.signUp({
         email,
-        password,
+        password
       });
 
       if (error) throw error;
@@ -63,7 +69,7 @@ export function useSupabaseAuth() {
     }
   };
 
-  const signOut = async () => {
+  const signOut = async (): Promise<{ error: any }> => {
     try {
       const { error } = await supabase.auth.signOut();
       if (error) throw error;
@@ -80,6 +86,6 @@ export function useSupabaseAuth() {
     signIn,
     signUp,
     signOut,
-    supabase,
+    supabase
   };
 }

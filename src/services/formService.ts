@@ -1,6 +1,5 @@
 import { createContactMessage } from './apiService';
-import { supabase } from '../integrations/supabase/client';
-import { fetchDataFromApi } from '../integrations/supabase/client';
+import { supabase, fetchDataFromApi } from '../integrations/supabase/client';
 
 // Function to save contact message
 export async function saveContactMessage(formData: {
@@ -51,9 +50,7 @@ export async function saveNewsletter(email: string) {
       .insert({ email })
       .select();
 
-    if (error) {
-      throw error;
-    }
+    if (error) throw error;
 
     return {
       success: true,
