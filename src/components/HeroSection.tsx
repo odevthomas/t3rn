@@ -15,8 +15,9 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-green-600 to-green-500 text-white text-sm font-medium mb-6">
-              <span className="bg-white w-2 h-2 rounded-full mr-2 animate-pulse"></span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-800/20 text-green-400 text-sm mb-4 mx-auto">
+
+              <span className="bg-green-300 w-2 h-2 rounded-full mr-2 animate-pulse"></span>
               Soluções Web Premiadas
             </div>
 
@@ -53,7 +54,7 @@ export default function HeroSection() {
             <div className="flex flex-wrap gap-4">
               <motion.a
                 href="#contact"
-                className="px-6 py-3 bg-gradient-to-r from-green-600 to-green-500 text-white font-medium rounded-lg hover:shadow-xl flex items-center gap-2 transition-all hover:gap-3"
+                className="px-6 py-3 bg-green-800 from-green-600 to-green-500 text-white font-medium rounded-lg hover:shadow-xl flex items-center gap-2 transition-all hover:gap-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -63,7 +64,7 @@ export default function HeroSection() {
 
               <motion.a
                 href="#projects"
-                className="px-6 py-3 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-medium rounded-lg hover:shadow-md flex items-center gap-2 transition-all"
+                className="px-6 py-3 bg-green-800/20 dark:bg-green-800/20 text-gray-900 dark:text-white font-medium rounded-lg hover:shadow-md flex items-center gap-2 transition-all"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >

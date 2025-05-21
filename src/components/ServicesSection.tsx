@@ -118,7 +118,7 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-green-600 to-green-500 text-white text-sm font-medium mb-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-800/20 text-green-400 text-sm mb-4 mx-auto">
             <span>Serviços Exclusivos</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -142,7 +142,7 @@ export default function ServicesSection() {
             <div className="bg-black rounded-2xl overflow-hidden shadow-elegant border border-gray-800">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="p-8 lg:p-12">
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-black text-white text-sm font-medium mb-6">
+                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-800/20 text-green-400 text-sm mb-4 mx-auto">
                     Mais Procurado
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">
@@ -170,7 +170,7 @@ export default function ServicesSection() {
                     </div>
                     <a
                       href="/orcamento"
-                      className="px-6 py-3 bg-green-500 text-white font-medium rounded-lg hover:shadow-lg flex items-center gap-2 transition-all" // Cor verde para o botão
+                      className="px-6 py-3 bg-green-800 text-white font-medium rounded-lg hover:shadow-lg flex items-center gap-2 transition-all" // Cor verde para o botão
                     >
                       <span>Solicitar proposta</span>
                       <ArrowRight className="w-4 h-4" />
@@ -286,7 +286,7 @@ export default function ServicesSection() {
                 Por que escolher nossos serviços?
               </h3>
 
-              <div className="space-y-6">
+              <div className="space-y-6 ">
                 {[
                   {
                     title: "Desenvolvimento Focado em Resultados",
@@ -306,7 +306,7 @@ export default function ServicesSection() {
                   }
                 ].map((item, i) => (
                   <div key={i} className="flex">
-                    <div className="bg-black w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4 flex-shrink-0">
+                    <div className="bg-green-800 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4 flex-shrink-0">
                       {i + 1}
                     </div>
                     <div>

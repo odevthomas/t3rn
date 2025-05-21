@@ -1,6 +1,6 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, CheckCircle } from "lucide-react";
+import DeviceMockupCarousel from "./DeviceMockupCarousel";
 
 interface Project {
   id: number;
@@ -13,8 +13,6 @@ interface Project {
 }
 
 export default function ProjectsSection() {
-  const [activeFilter, setActiveFilter] = useState("todos");
-
   const projects: Project[] = [
     {
       id: 1,
@@ -70,70 +68,52 @@ export default function ProjectsSection() {
     }
   ];
 
-  const filters = [
-    { name: "Todos", value: "todos" },
-    { name: "React", value: "react" },
-    { name: "Aplicativos", value: "react-native" },
-    { name: "E-commerce", value: "mongodb" },
-  ];
-
-  const filteredProjects = activeFilter === "todos"
-    ? projects
-    : projects.filter(project => project.tags.includes(activeFilter));
+  const mockupImages = projects.map(project => ({
+    id: project.id,
+    url: project.image,
+    title: project.title
+  }));
 
   return (
-    <section id="projects" className="py-24 bg-white dark:bg-black">
+    <section id="projects" className="py-10 bg-black text-white text-center">
       <div className="container px-4 md:px-8 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-16 text-center"
+          className="mb-16"
         >
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-black from-green-500 to-green-600 text-white text-sm mb-4">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-800/20 text-green-400 text-sm mb-4 mx-auto">
             <span>Casos de Sucesso Comprovados</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            Projetos que <span className="text-gradient-green">transformam</span> negócios
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Projetos que <span className="text-green-500">transformam</span> negócios
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Conheça algumas soluções que desenvolvemos para nossos clientes e os resultados impressionantes que alcançamos juntos.
           </p>
         </motion.div>
 
-        {/* Filters */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex justify-center gap-3 mb-12"
+          className="mb-10"
         >
-          {filters.map((filter) => (
-            <button
-              key={filter.value}
-              onClick={() => setActiveFilter(filter.value)}
-              className={`px-4 py-2 rounded-lg border  text-sm transition-all ${activeFilter === filter.value
-                  ? "bg-green-600 text-white font-medium shadow-sm"
-                  : "bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-850"
-                }`}
-            >
-              {filter.name}
-            </button>
-          ))}
+          <DeviceMockupCarousel images={mockupImages} />
         </motion.div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 + 0.3 }}
+              transition={{ duration: 0.6, delay: index * 0.1 + 0.5 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-black rounded-2xl border boder-gray-500 overflow-hidden shadow-elegant group"
+              className="bg-black border rounded-2xl overflow-hidden shadow-lg group"
             >
               <div className="relative h-60 overflow-hidden">
                 <img
@@ -141,57 +121,52 @@ export default function ProjectsSection() {
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex items-end opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="w-full p-6 flex justify-between items-center">
                     <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                    <div className="flex gap-2">
-                      <a
-                        href={project.link}
-                        className="p-2 rounded-full bg-white/90 hover:bg-white transition-colors"
-                        aria-label="Ver projeto online"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="w-5 h-5 text-gray-900" />
-                      </a>
-                    </div>
+                    <a
+                      href={project.link}
+                      className="p-2 rounded-full bg-green-600 hover:bg-green-500 transition-colors"
+                      aria-label="Ver projeto online"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink className="w-5 h-5 text-white" />
+                    </a>
                   </div>
                 </div>
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
+              <div className="p-6 text-left">
+                <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
+                <p className="text-gray-300 mb-4">{project.description}</p>
 
-                {/* Results */}
                 <div className="mb-4">
-                  <h4 className="font-medium text-sm text-gray-700 dark:text-gray-400 mb-2">Resultados alcançados:</h4>
+                  <h4 className="font-medium text-sm text-green-400 mb-2">Resultados alcançados:</h4>
                   <ul className="space-y-2">
                     {project.results.map((result, i) => (
-                      <li key={i} className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-700 dark:text-green mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-green-700 dark:text-gray-300">{result}</span>
+                      <li key={i} className="flex items-start text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">{result}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                {/* Tags */}
                 <div className="flex flex-wrap gap-2 mt-4">
                   {project.tags.map(tag => (
                     <span
                       key={`${project.id}-${tag}`}
-                      className="text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-850 text-black dark:text-black"
+                      className="text-xs px-2 py-1 rounded-full bg-green-800/20 text-green-400"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                {/* CTA */}
                 <a
                   href="#contact"
-                  className="mt-6 inline-flex items-center text-green-600 dark:text-white font-medium hover:underline"
+                  className="mt-6 inline-flex items-center text-green-400 font-medium hover:underline"
                 >
                   <span>Quero um projeto similar</span>
                   <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none">

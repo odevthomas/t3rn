@@ -176,7 +176,7 @@ const Index = () => {
       {/* Interactive components */}
       <AIChat />
       <InfoModal />
-      <Notification delay={5000} />
+      <Notification delay={7000} />
     </div>
   );
 };

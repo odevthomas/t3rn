@@ -13,15 +13,15 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="order-2 lg:order-1"
           >
-            <span className="inline-block px-3 py-1 bg-green-100 dark:bg-green-800 text-white dark:text-white-400 rounded-full text-sm font-medium mb-4">
+            <span className="inline-block px-3 py-1 bg-emerald-500 text-white rounded-full text-sm font-medium mb-4 text-center">
               Sobre Nós
             </span>
 
-            <h2 className="text-4xl md:text-5xl font-cashDisplay font-bold mb-6 text-gray-900 dark:text-gray-100">
+            <h2 className="text-4xl md:text-5xl font-cashDisplay font-bold mb-6 text-gray-900 dark:text-gray-100 text-center lg:text-left">
               Transformando ideias em soluções digitais
             </h2>
 
-            <div className="space-y-6 text-gray-600 dark:text-gray-300">
+            <div className="space-y-6 text-gray-600 dark:text-gray-300 text-center lg:text-left">
               <p className="text-lg">
                 Somos a <span className="font-semibold">T3RN Desenvolvimento</span>,
                 especialistas em criar soluções digitais que elevam negócios através
@@ -65,10 +65,10 @@ export default function AboutSection() {
                     viewport={{ once: true }}
                     className="flex flex-col items-center text-center p-5 rounded-xl bg-white dark:bg-black shadow-sm hover:shadow-md transition-all border border-gray-100 dark:border-gray-700"
                   >
-                    <div className="p-3 rounded-full bg-green-100 dark:bg-green-700 mb-4">
+                    <div className="p-3 rounded-full bg-emerald-100 dark:bg-emerald-600 mb-4">
                       {item.icon}
                     </div>
-                    <h3 className="font-semibold text-lg mb-2 text-white dark:text-white">{item.title}</h3>
+                    <h3 className="font-semibold text-lg mb-2 text-gray-800 dark:text-white">{item.title}</h3>
                     <p className="text-gray-500 dark:text-gray-400 text-sm">{item.desc}</p>
                   </motion.div>
                 ))}
@@ -102,7 +102,7 @@ export default function AboutSection() {
             </div>
 
             {/* Stats */}
-            <div className="absolute -bottom-10 -right-10 md:right-10 grid grid-cols-2 gap-3 max-w-xs">
+            <div className="absolute -bottom-10 right-0 md:right-10 grid grid-cols-2 gap-3 max-w-xs mx-auto">
               {[
                 { number: "5+", label: "Anos de experiência" },
                 { number: "98%", label: "Clientes satisfeitos" }
@@ -115,15 +115,15 @@ export default function AboutSection() {
                   viewport={{ once: true }}
                   className="text-center p-4 rounded-xl bg-white dark:bg-black shadow-xl border border-gray-100 dark:border-gray-700"
                 >
-                  <div className="text-3xl font-bold text-green-700 dark:text-green-300 mb-1">{stat.number}</div>
+                  <div className="text-3xl font-bold text-emerald-600 dark:text-emerald-300 mb-1">{stat.number}</div>
                   <div className="text-gray-500 dark:text-gray-400 text-xs">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute -bottom-4 -left-4 w-24 h-24 border-2 border-green-300 dark:border-green-700 rounded-full -z-10 hidden md:block"></div>
-            <div className="absolute -top-6 right-10 w-12 h-12 border-2 border-green-300 dark:border-green-700 rounded-lg -z-10 hidden md:block"></div>
+            <div className="absolute -bottom-4 -left-4 w-24 h-24 border-2 border-emerald-400 dark:border-emerald-700 rounded-full -z-10 hidden md:block"></div>
+            <div className="absolute -top-6 right-10 w-12 h-12 border-2 border-emerald-400 dark:border-emerald-700 rounded-lg -z-10 hidden md:block"></div>
           </motion.div>
         </div>
 
@@ -136,14 +136,16 @@ export default function AboutSection() {
           className="mt-24 text-center max-w-3xl mx-auto"
         >
           <div className="relative">
-            <div className="text-8xl font-cashDisplay text-gray-200 dark:text-green-800 absolute -top-10 left-0 right-0">"</div>
+            <div className="text-8xl font-cashDisplay text-gray-200 dark:text-emerald-800 absolute -top-10 left-1/2 transform -translate-x-1/2">
+              "
+            </div>
             <blockquote className="relative z-10 text-xl md:text-2xl font-medium italic text-gray-700 dark:text-gray-300">
               Nossa missão é transformar complexidade em simplicidade, desafios em oportunidades,
               e ideias em soluções digitais impactantes que impulsionam o sucesso dos nossos clientes.
             </blockquote>
             <div className="mt-6">
               <div className="font-semibold text-gray-900 dark:text-gray-100">Thomas Nascimento</div>
-            <div className="text-gray-500 dark:text-gray-400">T3RN, Desenvolvedor Full-Stack </div>
+              <div className="text-gray-500 dark:text-gray-400">T3RN, Desenvolvedor Full-Stack</div>
             </div>
           </div>
         </motion.div>
@@ -151,3 +153,4 @@ export default function AboutSection() {
     </section>
   );
 }
+  
