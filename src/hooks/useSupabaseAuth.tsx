@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
+import { supabase } from '../integrations/supabase/client'; // Adjust the import path as necessary
 import { Session, User } from '@supabase/supabase-js';
 
 export function useSupabaseAuth() {

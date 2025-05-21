@@ -1,5 +1,6 @@
 import { createContactMessage } from './apiService';
-import { supabase } from '@/integrations/supabase/client';
+import { supabase } from '../integrations/supabase/client';
+import { fetchDataFromApi } from '../integrations/supabase/client';
 
 // Function to save contact message
 export async function saveContactMessage(formData: {

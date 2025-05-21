@@ -1,4 +1,4 @@
-import { supabase } from '@/integrations/supabase/client';
+import { supabase } from '';
 
 // Function to fetch data from example_table
 export async function fetchExampleData() {
